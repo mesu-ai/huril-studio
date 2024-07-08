@@ -7,6 +7,7 @@
   <title>Home - Hurl Studio</title>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/custom.css">
   <style type="text/tailwindcss">
     @layer utilities {
@@ -22,62 +23,145 @@
 
 <body class="font-work-sans">
   <!-- <div id="navbar"></div> -->
-   
-    <div class="bg-primary border border-b h-10 grid grid-cols-2 items-center">
-    <div></div>
-     <div class="h-6 grid grid-cols-3 text-xs divide-x text-black font-semibold">
-        <div class="flex justify-center items-center">
-          <a class="hover-text-blue-600" href="tel:+8801817733055">+8801817-733055</a>
 
-        </div>
-        <div class="flex justify-center items-center">
-          <a href="mailto:info@hurlstudio.com">info@hurlstudio.com</a>
-        </div>
-        <div class="flex justify-center items-center">
-          <a href="https://www.twitter.com/"><img src="./assets/images/twitter.png" alt="Twitter" class=""></a>
-          <a href="https://www.twitter.com/"><img src="./assets/images/twitter.png" alt="Twitter" class=""></a>
-        </div>
-     </div>
+  <div class="container bg-primary border border-b h-10 grid grid-cols-2 items-center">
+    <div></div>
+    <div class="h-6 grid grid-cols-3 text-xs divide-x text-black font-semibold">
+      <div class="flex justify-center items-center">
+        <a class="hover-text-blue-600" href="tel:+8801817733055">+8801817-733055</a>
+      </div>
+      <div class="flex justify-center items-center">
+        <a href="mailto:info@hurlstudio.com">info@hurlstudio.com</a>
+      </div>
+      <div class="flex justify-center items-center">
+        <a href="https://www.twitter.com/"><img src="./assets/images/twitter.png" alt="Twitter" class=""></a>
+        <a href="https://www.twitter.com/"><img src="./assets/images/twitter.png" alt="Twitter" class=""></a>
+      </div>
     </div>
-    
-    <nav class="bg-slate-100 text-gray-800 sticky top-0 z-20">
-      <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center py-3">
-          <div class="flex items-center">
-            <img src="./assets/images/logo.png" alt="Logo" class="h-12">
-            <span class="ml-3 text-xl font-bold">Hurl Studio</span>
-          </div>
-          <div class="hidden lg:flex space-x-6 text-base font-medium">
-            <a href="index.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Home</a>
-            <a href="yoga.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Yoga</a>
-            <a href="cardio-exercise.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Cardio Exercise</a>
-            <a href="bungee-fitness.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Bungee Fitness</a>
-            <a href="aerial-yoga.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Aerial Yoga</a>
-            <a href="about-us.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">About Us</a>
-            <a href="book-an-appoinment.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Book an Appointment</a>
-          </div>
-          <div class="lg:hidden">
-            <button id="menu-btn" class="focus:outline-none">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-            </button>
-          </div>
+  </div>
+
+  <nav class="bg-slate-100 text-gray-800 sticky top-0 z-20">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-3">
+        <div class="flex items-center">
+          <img src="./assets/images/logo.png" alt="Logo" class="h-12">
+          <span class="ml-3 text-xl font-bold">Hurl Studio</span>
         </div>
-        <div id="mobile-menu" class="lg:hidden hidden">
-          <a href="index.html" class="block py-2 hover:text-[#104278]">Home</a>
-          <a href="yoga.html" class="block py-2 hover:text-[#104278]">Yoga</a>
-          <a href="cardio-exercise.html" class="block py-2 hover:text-[#104278]">Cardio Exercise</a>
-          <a href="bungee-fitness.html" class="block py-2 hover:text-[#104278]">Bungee Fitness</a>
-          <a href="aerial-yoga.html" class="block py-2 hover:text-[#104278]">Aerial Yoga</a>
-          <a href="about-us.html" class="block py-2 hover:text-[#104278]">About Us</a>
-          <a href="book-an-appointment.html" class="block py-2 hover:text-[#104278]">Book an Appointment</a>
+        <div class="hidden lg:flex space-x-6 text-base font-medium">
+          <a href="index.html"
+            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Home</a>
+          <a href="yoga.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Yoga</a>
+          <a href="cardio-exercise.html"
+            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Cardio Exercise</a>
+          <a href="bungee-fitness.html"
+            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Bungee Fitness</a>
+          <a href="aerial-yoga.html"
+            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Aerial Yoga</a>
+          <a href="about-us.html"
+            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">About Us</a>
+          <a href="book-an-appoinment.html"
+            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Book an Appointment</a>
+        </div>
+        <div class="lg:hidden">
+          <button id="menu-btn" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
         </div>
       </div>
-    </nav>
-  
-  <div class="lg:content-auto">
+      <div id="mobile-menu" class="lg:hidden hidden">
+        <a href="index.html" class="block py-2 hover:text-[#104278]">Home</a>
+        <a href="yoga.html" class="block py-2 hover:text-[#104278]">Yoga</a>
+        <a href="cardio-exercise.html" class="block py-2 hover:text-[#104278]">Cardio Exercise</a>
+        <a href="bungee-fitness.html" class="block py-2 hover:text-[#104278]">Bungee Fitness</a>
+        <a href="aerial-yoga.html" class="block py-2 hover:text-[#104278]">Aerial Yoga</a>
+        <a href="about-us.html" class="block py-2 hover:text-[#104278]">About Us</a>
+        <a href="book-an-appointment.html" class="block py-2 hover:text-[#104278]">Book an Appointment</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mx-auto">
+
+    <!-- hero section: -->
+    <section>
+
+      <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96 xl:h-[400px]">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/assets/images/exercise-1.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/assets/images/exercise-2.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/assets/images/exercise-3.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+          <!-- Item 4 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/assets/images/exercise-4.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+          <!-- Item 5 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/assets/images/exercise-1.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+            data-carousel-slide-to="0"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+            data-carousel-slide-to="1"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+            data-carousel-slide-to="2"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+            data-carousel-slide-to="3"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+            data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 1 1 5l4 4" />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button type="button"
+          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 9 4-4-4-4" />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+
+
+    </section>
+
     <p class="text-sm">
       Flowbite is an open-source library of UI components based on the utility-first Tailwind CSS framework featuring
       dark mode support, a Figma design system, templates, and more.
@@ -172,14 +256,16 @@
       TypeScript.
     </p>
     <img src="./assets/images/example.jpg" alt="Example Image" class="mt-4">
-  </div>
+  </main>
+
   <footer>
     <div class="bg-primary bg-slate-100 py-8">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div class="xl:col-span-2">
             <img src="./assets/images/logo-white.png" alt="Logo" class="h-12">
-            <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="mt-4 xl:max-w-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.</p>
           </div>
           <div>
             <h3 class="text-lg font-semibold">Quick Links</h3>
@@ -196,29 +282,37 @@
           <div>
             <h3 class="text-lg font-semibold">Contact Us</h3>
             <ul class="mt-4">
+
               <li><a href="tel:+8801817733055">+8801817-733055</a></li>
-              <li><a href="mailto: "></a> </li>
-              <li><a href="https://www.twitter.com/"><img src="./assets/images/twitter.png" alt="Twitter" class=""></a>
-                <a href="https://www.twitter.com/"><img src="./assets/images/twitter.png" alt="Twitter" class=""></a>
-              </li>
+              <li><a href="mailto:info@hurilstudio.com">info@hurilstudio.com</a> </li>
+
+              <li class="text-sm mt-3">Mercantile Bank/Samsung Service Center Building(3rd Floor), 191 Commerce View
+                Complex, CDA Avenue, East Nasirabad, Chittagong-4203, Bangladesh</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+    <hr>
     <div class="bg-slate-100 text-gray-800 py-4">
       <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
           <p>&copy; 2021 Hurl Studio. All rights reserved.</p>
-          <p>Designed by <a href="https://www.flowbite.com" class="text-primary">Flowbite</a></p>
+
+          <li class="flex gap-2">
+            <a href="https://www.facebook.com/"><img src="./assets/images/facebook.png" alt="Facebook" class="h-6"></a>
+            <a href="https://www.twitter.com/"><img src="./assets/images/twitter.png" alt="Twitter" class="h-6"></a>
+            <a href="https://www.instagram.com/"><img src="./assets/images/instagram.png" alt="Instagram"
+                class="h-6"></a>
+
+          </li>
+
         </div>
       </div>
     </div>
-
-
-
   </footer>
   <script src="./assets/js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 </body>
 
 </html>
