@@ -1,7 +1,6 @@
 
 .slider{
     height: 100vh;
-    margin-top: -50px;
     position: relative;
 }
 .slider .list .item{
@@ -37,11 +36,10 @@
 }
 .slider .list .item .content p:nth-child(1){
     text-transform: uppercase;
-    letter-spacing: 10px;
+    font-weight: medium;
 }
 .slider .list .item .content h2{
-    font-size: 50px;
-    margin: 0;
+    font-size: 40px;
 }
 .slider .list .item.active{
     opacity: 1;
