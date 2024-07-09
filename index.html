@@ -19,6 +19,30 @@
       font-family: 'Work Sans', sans-serif;
     }
   </style>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'light-ash' : '#7F7F7F',
+          'deep-ash': '#495057',
+
+          'light-blue': '#104278',
+          'deep-blue': '#1F5DA0',
+
+          'deep-green': '#1F955C',
+          'light-green': '#2BB673',
+        },
+        boxShadow: {
+        'custom': '0px 0px 8px 0px #00000029',
+        'custom1': '0px 0px 20px 0px rgba(0, 0, 0, 0.30)',
+      }
+      }
+    }
+  }
+</script>
+
 </head>
 
 <body class="font-work-sans">
@@ -299,12 +323,34 @@
         
       </ul>
 
+      <div>
+        <h2 class="text-3xl font-semibold text-center mt-10">Our Services</h2>
+        <ul class="grid grid-cols-3 gap-5 text-center">
+          <div class="group border border-slate-200 rounded-md hover:border-light-blue p-5 lg:p-8 hover:shadow-custom">
+            <li class="rounded-tr-full rounded-bl-full border px-3 py-2 bg-cyan-400">
+              <img class="mx-auto" src="https://hurilstudio.com/wp-content/uploads/2023/02/gym-icon.png" alt="yoga">
+            </li>
+            <h3 class="text-xl md:text-2xl font-semibold  group-hover:text-deep-blue mt-3">Yoga</h3>
+            <p class="text-sm text-deep-ash mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+              incididunt ut labore
+              et dolore magna aliqua.</p>
+          
+            <button
+              class="mt-4 text-sm rounded-full ring-2 ring-light-blue ring-inset hover:bg-light-blue hover:text-white px-3 py-1.5"
+              type="button">Read More</button>
+          
+          </div>
+        </ul>
+        <!-- <p class="text-sm mt
+        -10 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> -->
+
+      </div>
 
     </section>
 
-    <section>
-      <h2>About Us</h2>
-      <p class="text-sm">
+    <section class="bg-slate-100 mx-auto border-2 border-slate-300 rounded-md border-[#1F5DA0] py-5 px-10">
+      <h2 class="text-3xl font-semibold text-center">About Us</h2>
+      <p class="text-sm mt-10 text-justify">
         Flowbite is an open-source library of UI components based on the utility-first Tailwind CSS framework featuring
         dark mode support, a Figma design system, templates, and more.
 
@@ -340,7 +386,9 @@
         TypeScript.
     </section>
 
-    <section>
+    <!-- <section>
+      
+
       <p class="text-sm">
         Flowbite is an open-source library of UI components based on the utility-first Tailwind CSS framework featuring
         dark mode support, a Figma design system, templates, and more.
@@ -448,9 +496,7 @@
       </p>
       <img src="./assets/images/example.jpg" alt="Example Image" class="mt-4">
 
-    </section>
-
-
+    </section> -->
 
   </main>
 
