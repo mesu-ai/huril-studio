@@ -17,54 +17,164 @@
       font-family: 'Work Sans', sans-serif;
     }
   </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'light-ash' : '#7F7F7F',
+            'deep-ash': '#495057',
+  
+            'light-blue': '#104278',
+            'deep-blue': '#1F5DA0',
+  
+            'deep-green': '#1F955C',
+            'light-green': '#2BB673',
+          },
+          boxShadow: {
+          'custom': '0px 0px 8px 0px #00000029',
+          'custom1': '0px 0px 20px 0px rgba(0, 0, 0, 0.30)',
+        }
+        }
+      }
+    }
+  </script>
 </head>
 <body class="font-work-sans">
-  <!-- <div id="navbar"></div> -->
-  <header>
-    <nav class="bg-gray-800 text-white">
-      <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center py-4">
-          <div class="flex items-center">
-            <img src="./assets/images/logo.png" alt="Logo" class="h-12">
-            <span class="ml-3 text-xl font-bold">Hurl Studio</span>
-          </div>
-          <div class="hidden lg:flex space-x-6">
-            <a href="index.html" class="hover:text-blue-500">Home</a>
-            <a href="yoga.html" class="hover:text-blue-500">Yoga</a>
-            <a href="cardio-exercise.html" class="hover:text-blue-500">Cardio Exercise</a>
-            <a href="bungee-fitness.html" class="hover:text-blue-500">Bungee Fitness</a>
-            <a href="aerial-yoga.html" class="hover:text-blue-500">Aerial Yoga</a>
-            <a href="about-us.html" class="hover:text-blue-500">About Us</a>
-            <a href="book-an-appointment.html" class="hover:text-blue-500">Book an Appointment</a>
-          </div>
-          <div class="lg:hidden">
-            <button id="menu-btn" class="focus:outline-none">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-            </button>
-          </div>
+  
+  <div class="container mx-auto bg-primary border-b h-12 hidden md:grid md:grid-cols-2 items-center">
+    <div></div>
+    <div class="h-6 grid grid-cols-3 text-xs divide-x text-black font-semibold">
+      <div class="flex justify-center items-center gap-2">
+        <img width="24" height="24" src="./assets/images/call-icon.png" alt="phone">
+        <a class="hover-text-blue-600" href="tel:+8801817733055">+8801817-733055</a>
+      </div>
+      <div class="flex justify-center items-center gap-2">
+        <img width="24" height="24" src="./assets/images/email-icon.png" alt="email">
+        <a href="mailto:info@hurlstudio.com">info@hurlstudio.com</a>
+      </div>
+      <div class="flex justify-end items-center gap-5">
+        <a href="https://www.facebook.com/"><img src="./assets/svgs/facebook.svg" alt="Facebook"></a>
+        <a href="https://www.twitter.com/"><img src="./assets/svgs/twitter.svg" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav" class="bg-slate-100 text-gray-800 sticky top-0 z-30">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-3">
+        <div class="flex items-center">
+          <img src="./assets/images/logo.png" alt="Logo" class="h-12">
+          <span class="ml-3 text-xl font-bold">Hurl Studio</span>
         </div>
-        <div id="mobile-menu" class="lg:hidden hidden">
-          <a href="index.html" class="block py-2 hover:text-blue-500">Home</a>
-          <a href="yoga.html" class="block py-2 hover:text-blue-500">Yoga</a>
-          <a href="cardio-exercise.html" class="block py-2 hover:text-blue-500">Cardio Exercise</a>
-          <a href="bungee-fitness.html" class="block py-2 hover:text-blue-500">Bungee Fitness</a>
-          <a href="aerial-yoga.html" class="block py-2 hover:text-blue-500">Aerial Yoga</a>
-          <a href="about-us.html" class="block py-2 hover:text-blue-500">About Us</a>
-          <a href="book-an-appointment.html" class="block py-2 hover:text-blue-500">Book an Appointment</a>
+        
+        <div class="hidden lg:flex space-x-6 text-base font-medium nav-link">
+          <a href="index.html"
+            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Home</a>
+          <a href="yoga.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Yoga</a>
+          <a href="cardio-exercise.html"
+            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Cardio Exercise</a>
+          <a href="bungee-fitness.html"
+            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Bungee Fitness</a>
+          <a href="aerial-yoga.html"
+            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Aerial Yoga</a>
+          <a href="about-us.html"
+            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">About Us</a>
+          <a href="book-an-appointment.html"
+            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Book an Appointment</a>
+        </div>
+
+        <div class="lg:hidden">
+          <button id="menu-btn" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden ">
+        <a href="index.html" class="block py-2 hover:text-[#104278] ">Home</a>
+        <a href="yoga.html" class="block py-2 hover:text-[#104278]">Yoga</a>
+        <a href="cardio-exercise.html" class="block py-2 hover:text-[#104278]">Cardio Exercise</a>
+        <a href="bungee-fitness.html" class="block py-2 hover:text-[#104278]">Bungee Fitness</a>
+        <a href="aerial-yoga.html" class="block py-2 hover:text-[#104278]">Aerial Yoga</a>
+        <a href="about-us.html" class="block py-2 hover:text-[#104278]">About Us</a>
+        <a href="book-an-appointment.html" class="block py-2 hover:text-[#104278]">Book an Appointment</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container mx-auto">
+
+  </main>
+
+  <footer class="mt-5">
+    <div class="bg-sky-50 py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div class="xl:col-span-2">
+            <img src="./assets/images/logo-white.png" alt="Logo" class="h-12">
+            <p class="mt-4 xl:max-w-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">Quick Links</h3>
+            <ul class="mt-4">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="yoga.html">Yoga</a></li>
+              <li><a href="cardio-exercise.html">Cardio Exercise</a></li>
+              <li><a href="bungee-fitness.html">Bungee Fitness</a></li>
+              <li><a href="aerial-yoga.html">Aerial Yoga</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="book-an-appointment.html">Book an Appointment</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">Contact Us</h3>
+            <ul class="mt-4">
+
+              <li class="flex gap-2">
+                <!-- <img src="./assets/svgs/phone.svg" alt="phone">  -->
+                <a class="text-[#1F5DA0] text-xl" href="tel:+8801817733055">+8801817-733055</a>
+              </li>
+              <li class="flex gap-2">
+                <img src="./assets/svgs/email.svg" alt="email">
+                <a href="mailto:info@hurilstudio.com">info@hurilstudio.com</a>
+              </li>
+
+              <li class="text-sm mt-3">
+                <p>Mercantile Bank/Samsung Service Center Building(3rd Floor), 191 Commerce View Complex, CDA Avenue,
+                  East Nasirabad, Chittagong-4203, Bangladesh.</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </nav>
-   </header>
-   
-  <div class="lg:content-auto">
-    <!-- Cardio Exercise Page Content -->
-    <h1 class="text-3xl font-bold underline">
-      Cardio Exercise
-    </h1>
-    <p class="mt-4">Boost your cardiovascular health with our cardio exercise classes.</p>
-  </div>
+    </div>
+
+    <div class="bg-slate-100 text-gray-800 py-4 border-t border-gray-300">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+          <p>&copy; 2024 Hurl Studio. All rights reserved.</p>
+
+          <li class="flex gap-5">
+            <a href="https://www.facebook.com/"><img src="./assets/svgs/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.twitter.com/"><img src="./assets/svgs/twitter.svg" alt="Twitter"></a>
+            <a href="https://www.instagram.com/"><img src="./assets/svgs/instagram.svg" alt="Instagram"></a>
+          </li>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
   <script src="./assets/js/custom.js"></script>
+  <script src="/assets/js/slide.js"></script>
+
 </body>
 </html>
