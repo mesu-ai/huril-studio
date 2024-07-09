@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book an Appointment - Hurl Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./assets/css/custom.css">
   <style type="text/tailwindcss">
@@ -107,7 +107,79 @@
     </div>
   </nav>
 
-  <main class="container mx-auto">
+  <main class="container mx-auto px-4">
+
+    <!-- breadcrumb -->
+    <section>
+      <h2 class="text-base font-medium my-3">Home / Book An Appointment</h2>
+      <img
+        class="rounded-md h-80 w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
+        src="./assets/images/yoga.jpg" alt="yoga">
+    </section>
+
+    <!-- Book An Appointment -->
+    <section class="my-8 flex flex-col lg:flex-row gap-6 lg:gap-10 rounded-md border-2 p-10 ">
+      <div class="basis-[48%]">
+        <h2 class="text-3xl font-semibold text-deep-blue">For Appoinment</h2>
+        <div class="mt-4 space-y-5">
+          <form>
+           <li class="list-none">
+            <label for="name" class="text-deep-ash">First Name</label>
+            <input type="text" id="name" name="name" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your First Name" required>
+           </li>
+           <li class="list-none">
+            <label for="name" class="text-deep-ash">Last Name</label>
+            <input type="text" id="name" name="name" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Last Name" required>
+           </li>
+            <li class="list-none">
+              <label for="email" class="text-deep-ash">Email</label>
+              <input type="email" id="email" name="email" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Email" required>
+            </li>
+            <li class="list-none">
+              <label for="phone" class="text-deep-ash">Phone</label>
+              <input type="tel" id="phone" name="phone" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Contact Number" required>
+            </li>
+
+            <li class="list-none">
+              <label for="message" class="text-deep-ash">Message</label>
+              <textarea for="message" for="message" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Your Message" required>
+              </textarea>
+
+            </li>
+
+        
+
+            <button class="w-full rounded-md mt-3 py-2 text-white font-medium bg-light-green" type="submit">Send Message</button>
+
+          </form>
+
+    
+        </div>
+    
+      </div>
+      <span class="border-l"></span>
+      <div class="basis-[48%]">
+        <h2 class="text-3xl font-semibold text-deep-blue">Contact Details</h2>
+    
+        <ul class="mt-4">
+
+          <li class="flex gap-2">
+          
+            <a class="text-cyan-700 text-xl" href="tel:+8801817733055">+8801817-733055</a>
+          </li>
+          <li class="flex gap-2">
+            <img src="./assets/svgs/email.svg" alt="email">
+            <a href="mailto:info@hurilstudio.com">info@hurilstudio.com</a>
+          </li>
+
+          <li class="text-sm mt-3">
+            <p>Mercantile Bank/Samsung Service Center Building(3rd Floor), 191 Commerce View Complex, CDA Avenue,
+              East Nasirabad, Chittagong-4203, Bangladesh.</p>
+          </li>
+        </ul>
+    
+      </div>
+    </section>
 
   </main>
 
