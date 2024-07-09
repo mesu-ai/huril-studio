@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Hurl Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./assets/css/custom.css">
   <style type="text/tailwindcss">
@@ -22,26 +23,31 @@
       theme: {
         extend: {
           colors: {
-            'light-ash' : '#7F7F7F',
+            'light-ash': '#7F7F7F',
             'deep-ash': '#495057',
-  
+
             'light-blue': '#104278',
             'deep-blue': '#1F5DA0',
-  
+
             'deep-green': '#1F955C',
             'light-green': '#2BB673',
           },
           boxShadow: {
-          'custom': '0px 0px 8px 0px #00000029',
-          'custom1': '0px 0px 20px 0px rgba(0, 0, 0, 0.30)',
-        }
+            'custom': '0px 0px 8px 0px #00000029',
+
+          },
+          listStyleType: {
+            square: 'square',
+            roman: 'upper-roman',
+          }
         }
       }
     }
   </script>
 </head>
+
 <body class="font-work-sans">
-  
+
   <div class="container mx-auto bg-primary border-b h-12 hidden md:grid md:grid-cols-2 items-center">
     <div></div>
     <div class="h-6 grid grid-cols-3 text-xs divide-x text-black font-semibold">
@@ -68,7 +74,7 @@
           <img src="./assets/images/logo.png" alt="Logo" class="h-12">
           <span class="ml-3 text-xl font-bold">Hurl Studio</span>
         </div>
-        
+
         <div class="hidden lg:flex space-x-6 text-base font-medium nav-link">
           <a href="index.html"
             class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Home</a>
@@ -107,7 +113,101 @@
     </div>
   </nav>
 
-  <main class="container mx-auto">
+  <main class="container mx-auto px-4">
+    <!-- breadcrumb -->
+    <section>
+      <h2 class="text-base font-medium my-3">Home / About Us</h2>
+      <img
+        class="rounded-md h-80 w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
+        src="./assets/images/yoga.jpg" alt="yoga">
+    </section>
+
+    <!-- about us -->
+    <section class="my-8 flex flex-col lg:flex-row gap-6 lg:gap-10 rounded-md border-2 p-10 ">
+      <div class="basis-[48%]">
+        <h2 class="text-3xl font-semibold text-deep-blue">About Huril Studio</h2>
+        <ul class="mt-4 shadow-custom rounded-md p-5">
+          <h3 class="font-semibold text-xl">HURIL RAZMI</h3>
+          <p>Nutrition Consultant & International Fitness Trainer</p>
+          <p>- I am a Weight Management Nutrition Consultant and Fitness Trainer.</p>
+        </ul>
+
+        <div class="mt-4">
+          <h2 class="text-2xl font-semibold text-slate-600">Achievements:</h2>
+          <ul class="list-square ml-5 text-deep-ash mt-1" type="1">
+
+            <li>
+              Personal Fitness Trainer Certification, USA
+            </li>
+            <li>
+              Precision Nutrition Level 2 Master Health Coaching Certification
+            </li>
+            <li>
+              Yoga Instructor Certification, USA
+            </li>
+            <li>
+              Primary Aerobic / Group Fitness Instructor Certification, USA
+            </li>
+            <li>
+              Weight management Consultant Certification, USA
+            </li>
+            <li>
+              500 HRS YTT (yoga teacher training course ), Nepal.
+            </li>
+            <li>
+              Fat to slim Advance Dietitian course with Shikha Agarwal Sharma, India
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="mt-4">
+          <h2 class="text-xl font-semibold text-slate-600">Member’s of:</h2>
+          <ul class="list-disc ml-5 text-deep-ash mt-1" type="1">
+
+            <li>
+              American society for nutrition, USA
+            </li>
+            <li>
+              Canadian nutrition society, Canada
+            </li>
+            <li>
+              Academy of Nutrition and dietetics, USA
+            </li>
+            <li>
+              Yoga Alliance, USA
+            </li>
+            <li>
+              World Yoga Association, India
+            </li>
+            
+
+          </ul>
+
+        </div>
+
+      </div>
+      <span class="border-l"></span>
+      <div class="basis-[48%]">
+        <h2 class="text-3xl font-semibold text-deep-blue">Chairperson’s Speak</h2>
+
+        <ul class="space-y-5 mt-4 text-justify">
+          <li>
+            <p class="text-deep-ash">
+              Huril Studio had humble beginnings about three decades ago. Over the years, it has transformed into a hospital of international standards. We are committed to achieving patient satisfaction by providing our services, at a reasonable cost, for humanitarian and compassionate reasons. Our group hospitals have modern infrastructure, a wide range of medical services, experienced and highly qualified specialists, dedicated staff, and a patient-friendly organizational culture. core. The advances that have taken place recently, especially in the field of medical science and technology, have changed the whole scenario. Keeping up with these developments is essential to raising the standard of the healthcare delivery system. The advent of the Internet and e-mail has facilitated the sharing of information. It also closes the gap in the application of scientific advances elsewhere. We look forward to receiving your feedback to improve our services and provide the best medical services for society.
+            </p>
+            <p class="flex flex-col mt-5">
+              <span class="text-deep-ash text-[15px] ">- Best wishes,</span>
+              <span class="mt-1 font-medium ml-3">Huril Razmi</span>
+              <span class="text-sm -mt-1 font-medium text-slate-600 ml-3">Chairperson</span>
+            </p>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
 
   </main>
 
@@ -177,4 +277,5 @@
   <script src="/assets/js/slide.js"></script>
 
 </body>
+
 </html>

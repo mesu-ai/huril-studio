@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yoga - Hurl Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./assets/css/custom.css">
   <style type="text/tailwindcss">
@@ -22,26 +23,27 @@
       theme: {
         extend: {
           colors: {
-            'light-ash' : '#7F7F7F',
+            'light-ash': '#7F7F7F',
             'deep-ash': '#495057',
-  
+
             'light-blue': '#104278',
             'deep-blue': '#1F5DA0',
-  
+
             'deep-green': '#1F955C',
             'light-green': '#2BB673',
           },
           boxShadow: {
-          'custom': '0px 0px 8px 0px #00000029',
-          'custom1': '0px 0px 20px 0px rgba(0, 0, 0, 0.30)',
-        }
+            'custom': '0px 0px 8px 0px #00000029',
+            'custom1': '0px 0px 20px 0px rgba(0, 0, 0, 0.30)',
+          }
         }
       }
     }
   </script>
 </head>
+
 <body class="font-work-sans">
-  
+
   <div class="container mx-auto bg-primary border-b h-12 hidden md:grid md:grid-cols-2 items-center">
     <div></div>
     <div class="h-6 grid grid-cols-3 text-xs divide-x text-black font-semibold">
@@ -68,7 +70,7 @@
           <img src="./assets/images/logo.png" alt="Logo" class="h-12">
           <span class="ml-3 text-xl font-bold">Hurl Studio</span>
         </div>
-        
+
         <div class="hidden lg:flex space-x-6 text-base font-medium nav-link">
           <a href="index.html"
             class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Home</a>
@@ -107,7 +109,172 @@
     </div>
   </nav>
 
-  <main class="container mx-auto">
+  <main class="container mx-auto px-4">
+
+    <!-- breadcrumb -->
+    <section>
+      <h2 class="text-base font-medium my-3">Home / Yoga</h2>
+      <img
+        class="rounded-md h-80 w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
+        src="./assets/images/yoga.jpg" alt="yoga">
+    </section>
+
+    <!-- about yoga -->
+    <section class="my-8 flex flex-col lg:flex-row gap-6 lg:gap-10 rounded-md border-2 p-10 ">
+      <div class="basis-[48%]">
+        <h2 class="text-3xl font-semibold text-deep-blue">Yoga</h2>
+        <div class="mt-4 space-y-5">
+          <ul>
+            <h3 class="font-semibold"> What Is Yoga?</h3>
+            <p class="text-deep-ash mt-1 text-justify">
+              Yoga is an ancient and complex practice, rooted in Indian philosophy. It started as a spiritual practice
+              but has grown in popularity as a way to promote physical and mental health. Although classical yoga also
+              includes other elements, yoga practiced in the United States often emphasizes physical postures (asanas),
+              breathing techniques (pranayama), and meditation (dyana). There are many different styles of yoga, from
+              gentle exercises to physically demanding ones. Differences in the types of yoga used in the studies may
+              affect the study results. Therefore, it is difficult to evaluate research on the health effects of yoga.
+              Yoga and two practices that originated in China, tai chi and qigong, are sometimes referred to as
+              “meditative movements” practices. All three practices include both meditative and physical elements.
+            </p>
+          </ul>
+    
+          <div>
+            <h3 class="font-semibold"> What are the health benefits of yoga?</h3>
+            <p class="text-deep-ash mt-1">Research suggests that yoga may:</p>
+    
+            <ol class="list-decimal ml-5 text-deep-ash mt-1" type="1">
+    
+              <li>
+                Help improve general wellness by relieving stress, supporting good health habits, and improving
+                mental/emotional health, sleep, and balance.
+              </li>
+              <li>
+                Help people who are overweight or obese lose weight.
+              </li>
+              <li>
+                Help people manage anxiety or depressive symptoms associated with difficult life situations.
+              </li>
+              <li>
+                Help people with chronic diseases manage their symptoms and improve their quality of life.
+              </li>
+              <li>
+                Relieve low-back pain and neck pain, and possibly pain from tension-type headaches and knee
+                osteoarthritis.
+              </li>
+              <li>
+                Help people quit smoking.
+              </li>
+              <li>
+                Relieve menopause symptoms.
+              </li>
+            </ol>
+    
+          </div>
+    
+        </div>
+    
+      </div>
+      <span class="border-l"></span>
+      <div class="basis-[48%]">
+        <h2 class="text-3xl font-semibold text-deep-blue">Testimonials</h2>
+    
+        <ul class="space-y-5 mt-4 text-justify">
+          <li>
+            <p class="text-deep-ash">
+              “The yoga practices with Kailash Health Village were very interesting and in my opinion, it’s Excellent! The
+              yoga trainer was not only teaching asana, he was teaching complete yoga. We have not only learned about
+              technique but also learned about the benefits for body, mind, internal energy, the therapeutic use etc.”
+            </p>
+            <p class="font-medium mt-1">- Rashmi Khunduri</p>
+          </li>
+    
+          <li>
+            <p class="text-deep-ash">
+              “It was a big pleasure, an honor and very helpful to be in your yoga class. The individual program prepared
+              for me has some tremendous effect on me. I highly recommend the yoga classes to join here to all who really
+              wants to learn the art of yoga for total wellness.”
+            </p>
+            <p class="font-medium mt-1">- Madhuri Srivastava</p>
+          </li>
+    
+          <li>
+            <p class="text-deep-ash">
+              “Yoga sessions at Kailash Health Village have greatly helped me emotionally & physically. My back pain has
+              miraculously disappeared and the toning of my muscles has helped me to reduce. My fitness level in terms of
+              endurance has increased tremendously with all the breathing asanas every morning. Yoga and its cleansing
+              practices have proven to be extremely effective for my general health and there is a great sense of
+              well-being. Thanks to Kailash Health village for such a good services.”
+            </p>
+            <p class="font-medium mt-1">- Deepti Nasir</p>
+          </li>
+    
+        </ul>
+    
+      </div>
+    </section>
+
+    <!-- yoga classes -->
+    <section>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid gap-4">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+          </div>
+        </div>
+        <div class="grid gap-4">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+          </div>
+        </div>
+        <div class="grid gap-4">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+          </div>
+        </div>
+        <div class="grid gap-4">
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+          </div>
+          <div>
+            <img class="h-auto max-w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 
@@ -177,4 +344,5 @@
   <script src="/assets/js/slide.js"></script>
 
 </body>
+
 </html>
