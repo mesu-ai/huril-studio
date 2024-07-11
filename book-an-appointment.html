@@ -112,9 +112,20 @@
     <!-- breadcrumb -->
     <section>
       <h2 class="text-base font-medium my-3">Home / Book An Appointment</h2>
-      <img
-        class="rounded-md h-80 w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-        src="./assets/images/yoga.jpg" alt="yoga">
+
+      <div class="max-w-screen-2xl w-full relative pb-[400px] mx-auto">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3689.7029085401446!2d91.821763!3d22.364844!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd9b54a41da55%3A0x2f46a8a3c24a9294!2sSamsung%20Service%20Center!5e0!3m2!1sen!2sus!4v1720669292221!5m2!1sen!2sus" 
+            class="absolute top-0 left-0 w-full h-[400px] border-0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    
+      <!-- <img
+              class="rounded-md h-80 w-full transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
+              src="./assets/images/yoga.jpg" alt="yoga"> -->
     </section>
 
     <!-- Book An Appointment -->
@@ -122,15 +133,12 @@
       <div class="basis-[48%]">
         <h2 class="text-3xl font-semibold text-deep-blue">For Appoinment</h2>
         <div class="mt-4 space-y-5">
-          <form>
+          <form id="contact-form">
            <li class="list-none">
-            <label for="name" class="text-deep-ash">First Name</label>
-            <input type="text" id="name" name="name" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your First Name" required>
+            <label for="name" class="text-deep-ash">Name</label>
+            <input type="text" id="name" name="name" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Name" required>
            </li>
-           <li class="list-none">
-            <label for="name" class="text-deep-ash">Last Name</label>
-            <input type="text" id="name" name="name" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Last Name" required>
-           </li>
+        
             <li class="list-none">
               <label for="email" class="text-deep-ash">Email</label>
               <input type="email" id="email" name="email" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Email" required>
@@ -142,16 +150,19 @@
 
             <li class="list-none">
               <label for="message" class="text-deep-ash">Message</label>
-              <textarea for="message" for="message" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Your Message" required>
+              <textarea id="message" for="message" for="message" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue"  required>
               </textarea>
 
             </li>
 
-        
 
             <button class="w-full rounded-md mt-3 py-2 text-white font-medium bg-light-green" type="submit">Send Message</button>
 
           </form>
+
+          <!-- <a href="https://wa.me/1521412292?text=Hello" target="_blank">
+            <button>Message Us on WhatsApp</button>
+          </a> -->
 
     
         </div>
@@ -247,6 +258,24 @@
   <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
   <script src="./assets/js/custom.js"></script>
   <script src="/assets/js/slide.js"></script>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name= document.getElementById('name').value;
+      const email= document.getElementById('email').value;
+      const phone= document.getElementById('phone').value;
+      const message= document.getElementById('message').value;
+      console.log(name, email, phone, message);
+
+      const whatsAppMessage= `Name: ${name} \n Email: ${email} \n Phone: ${phone} \n Message: ${message}`;
+      const phoneNumber='1300172795';
+
+      const whatsAppUrl= `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsAppMessage)}`
+      window.open(whatsAppUrl, '_blank');
+
+    });
+  </script>
 
 </body>
 </html>
