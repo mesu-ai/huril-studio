@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment - Hurl Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/css/custom.css">
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+    .font-work-sans {
+      font-family: 'Work Sans', sans-serif;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'light-ash': '#7F7F7F',
+            'deep-ash': '#495057',
+
+            'light-blue': '#104278',
+            'deep-blue': '#1F5DA0',
+
+            'deep-green': '#1F955C',
+            'light-green': '#2BB673',
+          },
+          boxShadow: {
+            'custom': '0px 0px 8px 0px #00000029',
+            'custom1': '0px 0px 20px 0px rgba(0, 0, 0, 0.30)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-work-sans">
+  <main class="container mx-auto px-4 py-8">
+    <!-- <div class="login">
+        <h1>Log In</h1>
+        <form action="login.php" method="post">
+            <input type="text" name="username" placeholder="Username" required="required" />
+            <input type="password" name="password" placeholder="Password" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+        </form>
+    </div> -->
+
+    <div class="w-1/2 mx-auto bg-slate-50 p-5 lg:p-10">
+      <h2 class="text-3xl font-semibold text-deep-blue text-center ">Login</h2>
+      <hr class="my-5">
+      <div class="mt-4 space-y-5">
+        <form id="contact-form">
+
+          <!-- <div>
+          <label for="name" class="text-deep-ash">Name</label>
+          <input type="text" id="name" name="name" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Name" required>
+         </div> -->
+
+          <div>
+            <label for="email" class="text-deep-ash">Email</label>
+            <input type="email" id="email" name="email"
+              class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue"
+              placeholder="Enter Your Email" required>
+          </div>
+          <!-- <div>
+            <label for="phone" class="text-deep-ash">Phone</label>
+            <input type="tel" id="phone" name="phone" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Contact Number" required>
+          </div> -->
+
+          <div class="mt-3">
+            <label for="password" class="text-deep-ash">Password</label>
+            <input type="password" id="password" name="password"
+              class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue"
+              placeholder="Enter Your Password" required>
+          </div>
+
+
+          <div class="flex justify-end my-2">
+
+            <p class="font-medium text-sm text-deep-ash">Forgot Password?</p>
+
+          </div>
+
+
+
+          <button class="w-full rounded-md mt-3 py-2 text-white font-medium bg-light-green" type="submit">Login
+            Now</button>
+
+        </form>
+
+        <hr>
+        <div class="text-center">
+          <p class="text-deep-ash">Don't have an account? <a href="register.php" class="text-light-green">Register
+              Now</a></p>
+
+
+        </div>
+
+      </div>
+  </main>
+</body>
+
+</html>
