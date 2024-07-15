@@ -60,53 +60,49 @@
     </div>
   </div>
 
-  <!-- Navigation -->
-  <nav id="nav" class="bg-slate-100 text-gray-800 sticky top-0 z-30">
-    <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center text-sm md:text-base py-3">
-        <div class="flex items-center">
+ <!-- Navigation -->
+ <nav id="nav" class="bg-slate-100 text-gray-800 sticky top-0 z-30">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center text-sm md:text-base py-3 border-b lg:border-none">
+      <div>
+        <a href="/index.html" class="flex items-center">
           <img src="./assets/images/logo.png" alt="Logo" class="h-12">
           <span class="ml-3 text-xl font-bold">Hurl Studio</span>
-        </div>
-        
-        <div class="hidden lg:flex space-x-3 xl:space-x-6 text-base font-medium nav-link">
-          <a href="index.html"
-            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Home</a>
-          <a href="yoga.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Yoga</a>
-          <a href="cardio-exercise.html"
-            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Cardio Exercise</a>
-          <a href="bungee-fitness.html"
-            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Bungee Fitness</a>
-          <a href="aerial-yoga.html"
-            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Aerial Yoga</a>
-          <a href="about-us.html"
-            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">About Us</a>
-          <a href="book-an-appointment.html"
-            class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Book an Appointment</a>
-        </div>
-
-        <div class="lg:hidden">
-          <button id="menu-btn" class="focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-          </button>
-        </div>
-
+        </a>
       </div>
-      <div id="mobile-menu" class="hidden lg:hidden ">
-        <a href="index.html" class="block py-2 hover:text-[#104278] ">Home</a>
-        <a href="yoga.html" class="block py-2 hover:text-[#104278]">Yoga</a>
-        <a href="cardio-exercise.html" class="block py-2 hover:text-[#104278]">Cardio Exercise</a>
-        <a href="bungee-fitness.html" class="block py-2 hover:text-[#104278]">Bungee Fitness</a>
-        <a href="aerial-yoga.html" class="block py-2 hover:text-[#104278]">Aerial Yoga</a>
-        <a href="about-us.html" class="block py-2 hover:text-[#104278]">About Us</a>
-        <a href="book-an-appointment.html" class="block py-2 hover:text-[#104278]">Book an Appointment</a>
+
+      <div class="hidden lg:flex gap-10 xl:gap-20 text-base font-medium nav-link">
+        <ul class="flex items-center space-x-3 xl:space-x-6">
+          <li><a href="index.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Home</a></li>
+          <li><a href="fitness-plan.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Fitness Plan</a></li>
+          <li><a href="book-an-appointment.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">Book an Appointment</a></li>
+          <li><a href="about-us.html" class="hover:text-[#104278] border-b-2 border-transparent hover:border-[#104278]">About Us</a></li>
+        </ul>
+        <ul class="flex items-center gap-2 px-5">
+          <img src="./assets/images/user.png" alt="User" width="40" height="40">
+          <li class="flex flex-col text-sm font-bold">
+            <a href="register.html" class="text-light-blue hover:text-deep-blue hover:underline">Register</a>
+            <a href="login.html" class="text-light-blue hover:text-deep-blue hover:underline">Login</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="lg:hidden">
+        <button id="menu-btn" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
       </div>
     </div>
-  </nav>
-
+    <div id="mobile-menu" class="hidden lg:hidden py-10">
+      <a href="index.html" class="block py-2 hover:text-[#104278]">Home</a>
+      <a href="fitness-plan.html" class="block py-2 hover:text-[#104278]">Fitness Plan</a>
+      <a href="book-an-appointment.html" class="block py-2 hover:text-[#104278]">Book an Appointment</a>
+      <a href="about-us.html" class="block py-2 hover:text-[#104278]">About Us</a>
+    </div>
+  </div>
+</nav>
   <main class="container mx-auto px-4">
 
     <!-- breadcrumb -->
