@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fitness Plan - Hurl Studio</title>
+  <title>Food Plan Details - Hurl Studio</title>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
@@ -102,43 +102,70 @@
     </div>
   </nav>
 
-  <!-- Main content -->
-  <main class="container mx-auto px-4">
-    <!-- Filter Bar -->
-    <section class="py-5">
-      <div class="flex justify-center">
-        <button class="filter-btn mx-2 px-4 py-2 border rounded-full border-light-blue hover:bg-light-blue hover:text-white" data-filter="all">All</button>
-        <button class="filter-btn mx-2 px-4 py-2 border rounded-full border-light-blue hover:bg-light-blue hover:text-white" data-filter="food">Food Plan</button>
-        <button class="filter-btn mx-2 px-4 py-2 border rounded-full border-light-blue hover:bg-light-blue hover:text-white" data-filter="fitness">Fitness Plan</button>
-        <button class="filter-btn mx-2 px-4 py-2 border rounded-full border-light-blue hover:bg-light-blue hover:text-white" data-filter="weight">Weight Gain Plan</button>
+  <!-- Food Plan Details Section -->
+  <div class="container mx-auto px-4 mt-10">
+    <h1 class="text-3xl font-bold mb-5" id="plan-title">Food Plan Name</h1>
+    <p class="text-gray-700 mb-10" id="plan-description">This is a brief description of the food plan. It explains the goals, benefits, and structure of the plan.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <!-- Example of a plan card -->
+      <div class="bg-white shadow-custom p-5 rounded-lg ">
+        <div class="flex flex-col items-center mb-3">
+          <img src="./assets/images/fitness.png" alt="Plan Logo" width="50" height="50" class="mx-auto">
+          <h2 class="capitalize text-xl font-semibold text-sky-600 mt-1">Lose 7 kg weight</h2>
+        </div>
+        <p class="text-gray-700">Duration: 1 month</p>
+        <p class="text-lg font-bold my-2.5">Price: $5000</p>
+       
+        <div class="flex justify-center border-t pt-2">
+          <button class="bg-light-blue text-white px-4 py-2 rounded hover:bg-deep-blue" onclick="enrollNow(1)">Enroll Now</button>
+        </div>
+        
       </div>
-    </section>
-
-    <!-- Plans Section -->
-    <section id="plans" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <!-- Example Plan Card -->
-      <div class="plan-card border border-gray-200 rounded-lg p-5" data-category="food">
-        <h3 class="text-xl font-semibold mb-2">Healthy Food Plan</h3>
-        <p class="text-gray-600 mb-4">A well-balanced diet plan that helps you stay fit and healthy.</p>
-        <button class="details-btn px-4 py-2 bg-light-green text-white rounded-full" onclick="goToDetails('plan-name', 1)">See Details</button>
+      <div class="bg-white shadow-custom p-5 rounded-lg ">
+        <div class="flex flex-col items-center mb-3">
+          <img src="./assets/images/fitness.png" alt="Plan Logo" width="50" height="50" class="mx-auto">
+          <h2 class="capitalize text-xl font-semibold text-sky-600 mt-1">Lose 7 kg weight</h2>
+        </div>
+        <p class="text-gray-700">Duration: 1 month</p>
+        <p class="text-lg font-bold my-2.5">Price: $5000</p>
+       
+        <div class="flex justify-center border-t pt-2">
+          <button class="bg-light-blue text-white px-4 py-2 rounded hover:bg-deep-blue" onclick="enrollNow(1)">Enroll Now</button>
+        </div>
+        
       </div>
-
-      <div class="plan-card border border-gray-200 rounded-lg p-5" data-category="fitness">
-        <h3 class="text-xl font-semibold mb-2">Strength Training Plan</h3>
-        <p class="text-gray-600 mb-4">A workout plan designed to build muscle and strength.</p>
-        <button class="details-btn px-4 py-2 bg-light-green text-white rounded-full" onclick="goToDetails('plan-name', 1)">See Details</button>
+      <div class="bg-white shadow-custom p-5 rounded-lg ">
+        <div class="flex flex-col items-center mb-3">
+          <img src="./assets/images/fitness.png" alt="Plan Logo" width="50" height="50" class="mx-auto">
+          <h2 class="capitalize text-xl font-semibold text-sky-600 mt-1">Lose 7 kg weight</h2>
+        </div>
+        <p class="text-gray-700">Duration: 1 month</p>
+        <p class="text-lg font-bold my-2.5">Price: $5000</p>
+       
+        <div class="flex justify-center border-t pt-2">
+          <button class="bg-light-blue text-white px-4 py-2 rounded hover:bg-deep-blue" onclick="enrollNow(1)">Enroll Now</button>
+        </div>
+        
       </div>
-
-      <div class="plan-card border border-gray-200 rounded-lg p-5" data-category="weight">
-        <h3 class="text-xl font-semibold mb-2">Weight Gain Plan</h3>
-        <p class="text-gray-600 mb-4">A comprehensive plan to help you gain weight healthily.</p>
-        <button class="details-btn px-4 py-2 bg-light-green text-white rounded-full" onclick="goToDetails('plan-name', 1)">See Details</button>
+      <div class="bg-white shadow-custom p-5 rounded-lg ">
+        <div class="flex flex-col items-center mb-3">
+          <img src="./assets/images/fitness.png" alt="Plan Logo" width="50" height="50" class="mx-auto">
+          <h2 class="capitalize text-xl font-semibold text-sky-600 mt-1">Lose 7 kg weight</h2>
+        </div>
+        <p class="text-gray-700">Duration: 1 month</p>
+        <p class="text-lg font-bold my-2.5">Price: $5000</p>
+       
+        <div class="flex justify-center border-t pt-2">
+          <button class="bg-light-blue text-white px-4 py-2 rounded hover:bg-deep-blue" onclick="enrollNow(1)">Enroll Now</button>
+        </div>
+        
       </div>
-    </section>
-  </main>
+      <!-- Repeat for other plans -->
+    </div>
+  </div>
 
-  <!-- Footer -->
-  <footer class="mt-5">
+   <!-- Footer -->
+   <footer class="mt-5">
     <div class="bg-sky-50 py-8">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -198,35 +225,13 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
   <script>
-
-    function goToDetails(planName, planId) {
-      window.location.href = `./plan-details.html?plan=${planName}&id=${planId}`;
+    function enrollNow(planId) {
+      alert('Enrolling in plan with ID: ' + planId);
+      // You can redirect to an enrollment page or process enrollment here
     }
-    document.getElementById('menu-btn').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const planCards = document.querySelectorAll('.plan-card');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const filter = button.getAttribute('data-filter');
-
-        planCards.forEach(card => {
-          if (filter === 'all' || card.getAttribute('data-category') === filter) {
-            card.classList.remove('hidden');
-          } else {
-            card.classList.add('hidden');
-          }
-        });
-      });
-    });
-
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 </body>
 
 </html>
