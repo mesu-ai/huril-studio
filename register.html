@@ -39,18 +39,23 @@
 </head>
 <body class="font-work-sans">
   <main class="container mx-auto px-4 py-8">
-    <div class="w-1/2 mx-auto bg-slate-50 p-5 lg:p-10">
+    <div class="flex flex-col items-center justify-center">
+      <img src="./assets/images/logo.png" alt="Logo" class="h-12">
+      <p class="ml-3 text-xl font-bold text-deep-ash">Hurl Studio</p>
+    </div>
+
+    <div class="mt-5 max-w-lg mx-auto bg-slate-50 p-5 shadow-custom rounded-lg">
       <h2 class="text-3xl font-semibold text-deep-blue text-center">Register</h2>
       <hr class="my-5">
       <div id="step-1" class="step active mt-4 space-y-5">
         <form id="step-1-form">
-          <div>
+          <!-- <div>
             <label for="email" class="text-deep-ash">Email</label>
-            <input type="email" id="email" name="email" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Email" required>
-          </div>
+            <input type="email" id="email" name="email" class="w-full border-2 border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Email" required>
+          </div> -->
           <div>
             <label for="phone" class="text-deep-ash">Phone</label>
-            <input type="tel" id="phone" name="phone" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Contact Number" required>
+            <input type="tel" id="phone" name="phone" class="w-full border-2 border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Contact Number" required>
           </div>
           <button class="w-full rounded-md mt-3 py-2 text-white font-medium bg-light-green" type="submit">Next</button>
         </form>
@@ -59,7 +64,7 @@
         <form id="step-2-form">
           <div>
             <label for="token" class="text-deep-ash">Token</label>
-            <input type="text" id="token" name="token" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Token" required>
+            <input type="text" id="token" name="token" class="w-full border-2 border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Token" required>
           </div>
           <button class="w-full rounded-md mt-3 py-2 text-white font-medium bg-light-green" type="submit">Next</button>
         </form>
@@ -68,19 +73,19 @@
         <form id="step-3-form">
           <div>
             <label for="name" class="text-deep-ash">Name</label>
-            <input type="text" id="name" name="name" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Name" required>
+            <input type="text" id="name" name="name" class="w-full border-2 border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Name" required>
           </div>
           <div>
             <label for="email" class="text-deep-ash">Email</label>
-            <input type="email" id="email" name="email" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Email" required>
+            <input type="email" id="email" name="email" class="w-full border-2 border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Email" required>
           </div>
-          <div>
+          <!-- <div>
             <label for="phone" class="text-deep-ash">Phone</label>
-            <input type="tel" id="phone" name="phone" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Contact Number" required>
-          </div>
+            <input type="tel" id="phone" name="phone" class="w-full border-2 border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Contact Number" required>
+          </div> -->
           <div class="mt-3">
             <label for="password" class="text-deep-ash">Password</label>
-            <input type="password" id="password" name="password" class="w-full border-2 border-gray-300 rounded-md p-2 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Password" required>
+            <input type="password" id="password" name="password" class="w-full border-2 border-gray-300 rounded-md px-2 py-1.5 focus:outline-none focus:border-deep-blue" placeholder="Enter Your Password" required>
           </div>
           <button class="w-full rounded-md mt-3 py-2 text-white font-medium bg-light-green" type="submit">Register</button>
         </form>
