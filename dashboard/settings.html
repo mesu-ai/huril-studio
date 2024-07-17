@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/custom.css">
+</head>
+<body class="font-work-sans bg-gray-100">
+  <!-- Navbar -->
+  <nav id="nav" class="bg-slate-100 text-gray-800 sticky top-0 z-30">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center text-sm md:text-base py-3 border-b lg:border-none">
+        <div>
+          <a href="/index.html" class="flex items-center">
+            <img src="../assets/images/logo.png" alt="Logo" class="h-12">
+            <span class="ml-3 text-xl font-bold">Hurl Studio</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dashboard Layout -->
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-md hidden lg:block">
+      <div class="p-4">
+        <div class="flex items-center gap-4 p-4 border-b border-gray-200">
+          <img src="../assets/images/user.png" alt="User" class="w-12 h-12 rounded-full">
+          <div>
+            <h4 class="text-lg font-semibold">John Doe</h4>
+            <p class="text-sm text-gray-600">Administrator</p>
+          </div>
+        </div>
+        <nav class="mt-6">
+          <a href="/dashboard.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Dashboard</a>
+          <a href="/dashboard/attendance.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Attendance</a>
+          <a href="/dashboard/manage-Schedules.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Schedules</a>
+          <a href="/dashboard/manage-fitness.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Fitness Plan</a>
+          <a href="/dashboard/manage-courses.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Courses</a>
+          <a href="/dashboard/track-student.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Track Student</a>
+          <a href="/dashboard/administrator.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Administrator</a>
+          <a href="/dashboard/settings.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Settings</a>
+        </nav>
+        <div class="mt-6 border-t border-gray-200">
+          <a href="#" class="block py-2.5 px-4 rounded hover:bg-red-600 hover:text-white">Logout</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Mobile Sidebar -->
+    <div class="lg:hidden">
+      <button id="menu-btn" class="p-4 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-50 overflow-y-auto">
+        <button id="close-menu-btn" class="p-4 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <div class="p-4">
+          <div class="flex items-center gap-4 p-4 border-b border-gray-200">
+            <img src="../assets/images/user.png" alt="User" class="w-12 h-12 rounded-full">
+            <div>
+              <h4 class="text-lg font-semibold">John Doe</h4>
+              <p class="text-sm text-gray-600">Administrator</p>
+            </div>
+          </div>
+          <nav class="mt-6">
+            <a href="/dashboard.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Dashboard</a>
+            <a href="/dashboard/attendance.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Attendance</a>
+            <a href="/dashboard/manage-Schedules.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Schedules</a>
+            <a href="/dashboard/manage-fitness.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Fitness Plan</a>
+            <a href="/dashboard/manage-courses.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Courses</a>
+            <a href="/dashboard/track-student.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Track Student</a>
+            <a href="/dashboard/administrator.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Administrator</a>
+            <a href="/dashboard/settings.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Settings</a>
+          </nav>
+          <div class="mt-6 border-t border-gray-200">
+            <a href="#" class="block py-2.5 px-4 rounded hover:bg-red-600 hover:text-white">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <!-- Settings Page Main Content -->
+<main id="main-content" class="flex-1 p-6 lg:p-8">
+  <h1 class="text-2xl font-semibold mb-6">Settings</h1>
+  
+  <!-- Edit Name Section -->
+  <div class="mb-6">
+    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+    <div class="flex items-center mt-1">
+      <input type="text" id="name" name="name" value="John Smith" class="border border-gray-300 rounded-md p-2 flex-1" disabled>
+      <button type="button" id="edit-name" class="ml-2 bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-1 rounded-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-3a6 6 0 110-10v2a4 4 0 100 6v2z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Email Section -->
+  <div class="mb-6">
+    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+    <input type="email" id="email" name="email" value="john.smith@example.com" class="border border-gray-300 rounded-md p-2 w-full" disabled>
+  </div>
+  
+  <!-- Account Information -->
+  <div class="bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-xl font-medium mb-4">Account Information</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Name</label>
+        <p class="text-gray-900 mt-1">John Smith</p>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Email</label>
+        <p class="text-gray-900 mt-1">john.smith@example.com</p>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Phone</label>
+        <p class="text-gray-900 mt-1">+1 234 567 890</p>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Purchased Courses</label>
+        <ul class="list-disc list-inside text-gray-900 mt-1">
+          <li>Course A</li>
+          <li>Course B</li>
+          <li>Course C</li>
+        </ul>
+      </div>
+      <div class="col-span-2">
+        <label class="block text-sm font-medium text-gray-700">Attendance Sheet</label>
+        <!-- Replace with actual attendance sheet display (table, etc.) -->
+        <p class="text-gray-900 mt-1">Attendance details...</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-100 text-gray-800 py-4 border-t border-gray-300">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center text-sm md:text-base">
+        <p>&copy; 2024 Hurl Studio. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a href="https://www.facebook.com/"><img src="../assets/svgs/facebook.svg" alt="Facebook" class="h-6"></a>
+          <a href="https://www.instagram.com/"><img src="../assets/svgs/instagram.svg" alt="Instagram" class="h-6"></a>
+          <a href="https://www.linkedin.com/"><img src="../assets/svgs/twitter.svg" alt="twitter" class="h-6"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.remove('hidden');
+    });
+    document.getElementById('close-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+  </script>
+</body>
+</html>

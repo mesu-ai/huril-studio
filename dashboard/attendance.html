@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/custom.css">
+</head>
+<body class="font-work-sans bg-gray-100">
+  <!-- Navbar -->
+  <nav id="nav" class="bg-slate-100 text-gray-800 sticky top-0 z-30">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center text-sm md:text-base py-3 border-b lg:border-none">
+        <div>
+          <a href="/index.html" class="flex items-center">
+            <img src="../assets/images/logo.png" alt="Logo" class="h-12">
+            <span class="ml-3 text-xl font-bold">Hurl Studio</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dashboard Layout -->
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-md hidden lg:block">
+      <div class="p-4">
+        <div class="flex items-center gap-4 p-4 border-b border-gray-200">
+          <img src="../assets/images/user.png" alt="User" class="w-12 h-12 rounded-full">
+          <div>
+            <h4 class="text-lg font-semibold">John Doe</h4>
+            <p class="text-sm text-gray-600">Administrator</p>
+          </div>
+        </div>
+        <nav class="mt-6">
+          <a href="/dashboard.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Dashboard</a>
+          <a href="/dashboard/attendance.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Attendance</a>
+          <a href="/dashboard/manage-Schedules.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Schedules</a>
+          <a href="/dashboard/manage-fitness.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Fitness Plan</a>
+          <a href="/dashboard/manage-courses.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Courses</a>
+          <a href="/dashboard/track-student.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Track Student</a>
+          <a href="/dashboard/administrator.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Administrator</a>
+          <a href="/dashboard/settings.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Settings</a>
+        </nav>
+        <div class="mt-6 border-t border-gray-200">
+          <a href="#" class="block py-2.5 px-4 rounded hover:bg-red-600 hover:text-white">Logout</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Mobile Sidebar -->
+    <div class="lg:hidden">
+      <button id="menu-btn" class="p-4 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-50 overflow-y-auto">
+        <button id="close-menu-btn" class="p-4 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <div class="p-4">
+          <div class="flex items-center gap-4 p-4 border-b border-gray-200">
+            <img src="../assets/images/user.png" alt="User" class="w-12 h-12 rounded-full">
+            <div>
+              <h4 class="text-lg font-semibold">John Doe</h4>
+              <p class="text-sm text-gray-600">Administrator</p>
+            </div>
+          </div>
+          <nav class="mt-6">
+            <a href="/dashboard.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Dashboard</a>
+            <a href="/dashboard/attendance.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Attendance</a>
+            <a href="/dashboard/manage-Schedules.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Schedules</a>
+            <a href="/dashboard/manage-fitness.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Fitness Plan</a>
+            <a href="/dashboard/manage-courses.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Courses</a>
+            <a href="/dashboard/track-student.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Track Student</a>
+            <a href="/dashboard/administrator.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Administrator</a>
+            <a href="/dashboard/settings.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Settings</a>
+          </nav>
+          <div class="mt-6 border-t border-gray-200">
+            <a href="#" class="block py-2.5 px-4 rounded hover:bg-red-600 hover:text-white">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-1 p-6 lg:p-8">
+      <h1 class="text-2xl font-semibold mb-6">Attendance</h1>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4">
+          <label for="date" class="block text-sm font-medium text-gray-700">Select Date</label>
+          <input type="date" id="date" name="date" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div class="mb-4">
+          <label for="schedule" class="block text-sm font-medium text-gray-700">Select Class Schedule</label>
+          <select id="schedule" name="schedule" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            <option value="morning">Morning (8 AM - 10 AM)</option>
+            <option value="afternoon">Afternoon (12 PM - 2 PM)</option>
+            <option value="evening">Evening (5 PM - 7 PM)</option>
+          </select>
+        </div>
+        <table id="attendance-table" class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Student</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+              <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Weight (kg)</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">John Smith</td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <input type="radio" id="john-smith-present" name="john-smith" value="present">
+                <label for="john-smith-present">Present</label>
+                <input type="radio" id="john-smith-absent" name="john-smith" value="absent">
+                <label for="john-smith-absent">Absent</label>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <input type="number" id="john-smith-weight" name="john-smith-weight" class="border border-gray-300 rounded-md p-1" step="0.1">
+              </td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">Jane Doe</td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <input type="radio" id="jane-doe-present" name="jane-doe" value="present">
+                <label for="jane-doe-present">Present</label>
+                <input type="radio" id="jane-doe-absent" name="jane-doe" value="absent">
+                <label for="jane-doe-absent">Absent</label>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <input type="number" id="jane-doe-weight" name="jane-doe-weight" class="border border-gray-300 rounded-md p-1" step="0.1">
+              </td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">Mike Johnson</td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <input type="radio" id="mike-johnson-present" name="mike-johnson" value="present">
+                <label for="mike-johnson-present">Present</label>
+                <input type="radio" id="mike-johnson-absent" name="mike-johnson" value="absent">
+                <label for="mike-johnson-absent">Absent</label>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <input type="number" id="mike-johnson-weight" name="mike-johnson-weight" class="border border-gray-300 rounded-md p-1" step="0.1">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="mt-4">
+          <button id="submit-attendance" class="bg-indigo-600 text-white px-4 py-2 rounded-md">Submit Attendance</button>
+        </div>
+      </div>
+    </main>
+    
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-100 text-gray-800 py-4 border-t border-gray-300">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center text-sm md:text-base">
+        <p>&copy; 2024 Hurl Studio. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a href="https://www.facebook.com/"><img src="../assets/svgs/facebook.svg" alt="Facebook" class="h-6"></a>
+          <a href="https://www.instagram.com/"><img src="../assets/svgs/instagram.svg" alt="Instagram" class="h-6"></a>
+          <a href="https://www.linkedin.com/"><img src="../assets/svgs/twitter.svg" alt="twitter" class="h-6"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+  <script>
+
+    // Mobile Menu
+    document.getElementById('menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.remove('hidden');
+    });
+    document.getElementById('close-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+
+  </script>
+
+
+<script>
+  document.getElementById('submit-attendance').addEventListener('click', function() {
+    const date = document.getElementById('date').value;
+    const schedule = document.getElementById('schedule').value;
+    const attendanceTable = document.getElementById('attendance-table').getElementsByTagName('tbody')[0];
+    const rows = attendanceTable.getElementsByTagName('tr');
+    
+    let attendanceData = {
+      date: date,
+      schedule: schedule,
+      students: []
+    };
+    
+    for (let row of rows) {
+      const studentName = row.cells[0].textContent.trim();
+      const statusElements = row.querySelectorAll('input[type="radio"]');
+      let status = '';
+      for (let statusElement of statusElements) {
+        if (statusElement.checked) {
+          status = statusElement.value;
+          break;
+        }
+      }
+      const weight = row.querySelector('input[type="number"]').value;
+      
+      attendanceData.students.push({
+        name: studentName,
+        status: status,
+        weight: weight
+      });
+    }
+    
+    console.log(attendanceData);
+    // Here you can send the data to the server or handle it as needed.
+  });
+  </script>
+</body>
+</html>
