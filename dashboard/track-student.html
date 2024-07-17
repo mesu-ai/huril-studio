@@ -41,7 +41,7 @@
           <a href="/dashboard/attendance.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Attendance</a>
           <a href="/dashboard/manage-Schedules.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Schedules</a>
           <a href="/dashboard/manage-fitness.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Fitness Plan</a>
-          <a href="/dashboard/manage-courses.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Courses</a>
+          
           <a href="/dashboard/track-student.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Track Student</a>
           <a href="/dashboard/administrator.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Administrator</a>
           <a href="/dashboard/settings.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Settings</a>
@@ -78,7 +78,7 @@
             <a href="/dashboard/attendance.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Attendance</a>
             <a href="/dashboard/manage-Schedules.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Schedules</a>
             <a href="/dashboard/manage-fitness.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Fitness Plan</a>
-            <a href="/dashboard/manage-courses.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Courses</a>
+            
             <a href="/dashboard/track-student.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Track Student</a>
             <a href="/dashboard/administrator.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Administrator</a>
             <a href="/dashboard/settings.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Settings</a>
@@ -92,12 +92,60 @@
 
     <!-- Main Content -->
     <main id="main-content" class="flex-1 p-6 lg:p-8">
-      <h1 class="text-2xl font-semibold mb-6">Attendance</h1>
+      <h1 class="text-2xl font-semibold mb-6">Track Student</h1>
       <div class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-xl font-medium mb-4">Attendance</h2>
-        <p>Attendance content goes here.</p>
+        <!-- Search Student -->
+        <div class="mb-4">
+          <label for="search-student" class="block text-sm font-medium text-gray-700">Search Student</label>
+          <input type="text" id="search-student" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Search by name, email, or phone">
+        </div>
+    
+        <!-- Student Information Table -->
+        <div class="overflow-x-auto max-h-96">
+          <table class="min-w-full bg-white border border-gray-300">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="px-4 py-2 border-b border-gray-300">Name</th>
+                <th class="px-4 py-2 border-b border-gray-300">Email</th>
+                <th class="px-4 py-2 border-b border-gray-300">Phone</th>
+                <th class="px-4 py-2 border-b border-gray-300">Join Date</th>
+                <th class="px-4 py-2 border-b border-gray-300">Active Plan</th>
+                <th class="px-4 py-2 border-b border-gray-300">Join Weight</th>
+                <th class="px-4 py-2 border-b border-gray-300">Current Weight</th>
+                <th class="px-4 py-2 border-b border-gray-300">Attendance Sheet</th>
+              </tr>
+            </thead>
+            <tbody id="student-table-body" class="divide-y divide-gray-200">
+              <!-- Static example rows, replace with dynamic content later -->
+              <tr>
+                <td class="px-4 py-2">John Doe</td>
+                <td class="px-4 py-2">john@example.com</td>
+                <td class="px-4 py-2">123-456-7890</td>
+                <td class="px-4 py-2">2023-01-01</td>
+                <td class="px-4 py-2">Weight Loss Plan</td>
+                <td class="px-4 py-2">80 kg</td>
+                <td class="px-4 py-2">75 kg</td>
+                <td class="px-4 py-2"><a href="#" class="text-blue-500">View</a></td>
+              </tr>
+              <tr>
+                <td class="px-4 py-2">Jane Smith</td>
+                <td class="px-4 py-2">jane@example.com</td>
+                <td class="px-4 py-2">123-456-7890</td>
+                <td class="px-4 py-2">2023-02-15</td>
+                <td class="px-4 py-2">Fitness Plan</td>
+                <td class="px-4 py-2">70 kg</td>
+                <td class="px-4 py-2">68 kg</td>
+                <td class="px-4 py-2"><a href="#" class="text-blue-500">View</a></td>
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
+      </div>
+    </main>
+    
   </div>
 
   <!-- Footer -->
@@ -123,5 +171,32 @@
       document.getElementById('mobile-menu').classList.add('hidden');
     });
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Search functionality
+      const searchInput = document.getElementById('search-student');
+      const tableBody = document.getElementById('student-table-body');
+    
+      searchInput.addEventListener('input', function() {
+        const filter = searchInput.value.toLowerCase();
+        const rows = tableBody.getElementsByTagName('tr');
+    
+        for (let i = 0; i < rows.length; i++) {
+          const cells = rows[i].getElementsByTagName('td');
+          let match = false;
+    
+          for (let j = 0; j < cells.length; j++) {
+            if (cells[j].innerText.toLowerCase().includes(filter)) {
+              match = true;
+              break;
+            }
+          }
+    
+          rows[i].style.display = match ? '' : 'none';
+        }
+      });
+    });
+    </script>
+    
 </body>
 </html>

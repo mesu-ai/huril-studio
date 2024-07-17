@@ -25,7 +25,7 @@
   </nav>
 
   <!-- Dashboard Layout -->
-  <div class="flex h-screen">
+  <div class="flex h-screen overflow-auto">
     <!-- Sidebar -->
     <aside class="w-64 bg-white shadow-md hidden lg:block">
       <div class="p-4">
@@ -41,7 +41,7 @@
           <a href="/dashboard/attendance.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Attendance</a>
           <a href="/dashboard/manage-Schedules.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Schedules</a>
           <a href="/dashboard/manage-fitness.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Fitness Plan</a>
-          <a href="/dashboard/manage-courses.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Courses</a>
+          
           <a href="/dashboard/track-student.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Track Student</a>
           <a href="/dashboard/administrator.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Administrator</a>
           <a href="/dashboard/settings.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Settings</a>
@@ -78,7 +78,7 @@
             <a href="/dashboard/attendance.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Attendance</a>
             <a href="/dashboard/manage-Schedules.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Schedules</a>
             <a href="/dashboard/manage-fitness.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Fitness Plan</a>
-            <a href="/dashboard/manage-courses.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Manage Courses</a>
+            
             <a href="/dashboard/track-student.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Track Student</a>
             <a href="/dashboard/administrator.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Administrator</a>
             <a href="/dashboard/settings.html" class="block py-2.5 px-4 rounded hover:bg-gray-200">Settings</a>
@@ -91,13 +91,55 @@
     </div>
 
     <!-- Main Content -->
-    <main id="main-content" class="flex-1 p-6 lg:p-8">
-      <h1 class="text-2xl font-semibold mb-6">Attendance</h1>
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <h2 class="text-xl font-medium mb-4">Attendance</h2>
-        <p>Attendance content goes here.</p>
+    <main id="main-content" class="flex-1 px-6 lg:px-8 overflow-auto">
+      <h1 class="text-2xl font-semibold mb-6">Manage Fitness Plan</h1>
+      <div class="bg-white p-6 rounded-lg shadow-md" id="manage-fitness-content">
+        <div class="mb-6">
+          <label for="category-select" class="block text-sm font-medium text-gray-700">Select Food Plan Category</label>
+          <select id="category-select" name="category" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            <option value="weight-gain">Weight Gain</option>
+            <option value="weight-loss">Weight Loss</option>
+            <option value="fitness">Fitness</option>
+            <option value="diet">Diet</option>
+          </select>
+        </div>
+    
+        <div class="mb-6">
+          <label for="package-group-select" class="block text-sm font-medium text-gray-700">Package Group Name</label>
+          <select id="package-group-select" name="package-group" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            <option value="healthy-food-plan">Healthy Food Plan</option>
+            <option value="balanced-diet">Balanced Diet</option>
+            <option value="protein-rich">Protein Rich</option>
+            <option value="low-carb">Low Carb</option>
+          </select>
+        </div>
+    
+        <div class="mb-6">
+          <label for="package-description" class="block text-sm font-medium text-gray-700">Package Short Description</label>
+          <textarea id="package-description" name="package-description" rows="3" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+        </div>
+    
+        <div class="mb-6">
+          <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
+          <input type="text" id="title" name="title" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+    
+        <div class="mb-6">
+          <label for="duration" class="block text-sm font-medium text-gray-700">Duration</label>
+          <input type="text" id="duration" name="duration" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+    
+        <div class="mb-6">
+          <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
+          <input type="text" id="price" name="price" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+    
+        <div class="flex justify-end">
+          <button id="submit-button" class="bg-blue-500 text-white px-4 py-2 rounded-md">Submit</button>
+        </div>
       </div>
     </main>
+    
   </div>
 
   <!-- Footer -->
@@ -123,5 +165,31 @@
       document.getElementById('mobile-menu').classList.add('hidden');
     });
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('submit-button').addEventListener('click', function() {
+      const category = document.getElementById('category-select').value;
+      const packageGroup = document.getElementById('package-group-select').value;
+      const packageDescription = document.getElementById('package-description').value;
+      const title = document.getElementById('title').value;
+      const duration = document.getElementById('duration').value;
+      const price = document.getElementById('price').value;
+  
+      const packageData = {
+        category,
+        packageGroup,
+        packageDescription,
+        title,
+        duration,
+        price
+      };
+  
+      console.log('Package Data:', packageData);
+      // Replace the above line with code to send data to the server or process it as needed
+    });
+  });
+  </script>
+  
 </body>
 </html>
